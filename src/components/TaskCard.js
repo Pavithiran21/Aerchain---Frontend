@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Calendar, Flag, Trash2, Edit } from 'lucide-react';
-import { toast } from 'react-toastify';
 import TaskForm from './TaskForm';
 import TaskViewModal from './TaskViewModal';
 import ConfirmDialog from './ConfirmDialog';

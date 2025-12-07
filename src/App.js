@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import TaskBoard from './components/TaskBoard';
 import TaskList from './components/TaskList';
 import VoiceInput from './components/VoiceInput';
@@ -27,7 +27,6 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
   const [viewMode, setViewMode] = useState('board');
-  const hasShownInitialToast = useRef(false);
 
 
   const fetchTasks = useCallback(async (searchFilters = null, page = 1, showToast = false) => {
@@ -101,10 +100,6 @@ function App() {
 
   const handlePageChange = (page) => {
     fetchTasks(filters, page, true);
-  };
-
-  const showNotification = (message, type = 'success') => {
-    setNotification({ message, type });
   };
 
   const handleTaskUpdate = async (taskId, updates) => {
