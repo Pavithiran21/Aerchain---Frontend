@@ -1,0 +1,161 @@
+.task-column {
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-height: 400px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.app.light .task-column {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.app.dark .task-column {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.task-column:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.app.light .column-header {
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.app.dark .column-header {
+  border-bottom: 1px solid #374151;
+}
+
+.column-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.app.light .column-header h3 {
+  color: #1e293b;
+}
+
+.app.dark .column-header h3 {
+  color: #f1f5f9;
+}
+
+.task-count {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.app.light .task-count {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.app.dark .task-count {
+  background: #374151;
+  color: #94a3b8;
+}
+
+.column-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 400px);
+  padding-right: 0.5rem;
+}
+
+.column-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.column-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.column-content::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.app.dark .column-content::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+.empty-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border: 2px dashed;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.app.light .empty-column {
+  border-color: #e2e8f0;
+  color: #94a3b8;
+  background: #f8fafc;
+}
+
+.app.dark .empty-column {
+  border-color: #374151;
+  color: #64748b;
+  background: #0f172a;
+}
+
+.empty-column p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.task-column.drag-over {
+  border-color: #3b82f6;
+}
+
+.app.light .task-column.drag-over {
+  background: #eff6ff;
+}
+
+.app.dark .task-column.drag-over {
+  background: #1e3a8a;
+}
+
+.task-column[data-status="To Do"] .column-header h3 {
+  color: #dc2626;
+}
+
+.task-column[data-status="In Progress"] .column-header h3 {
+  color: #d97706;
+}
+
+.task-column[data-status="Done"] .column-header h3 {
+  color: #059669;
+}
+
+@media (max-width: 768px) {
+  .task-column {
+    margin-bottom: 1rem;
+    min-height: auto;
+  }
+  
+  .column-content {
+    min-height: 200px;
+  }
+}

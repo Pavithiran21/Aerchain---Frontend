@@ -1,0 +1,190 @@
+.task-list {
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  transition: all 0.3s ease;
+}
+
+.app.light .task-list {
+  background: white;
+}
+
+.app.dark .task-list {
+  background: #1e293b;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 120px;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.app.light .list-header {
+  background: #f3f4f6;
+}
+
+.app.dark .list-header {
+  background: #334155;
+}
+
+.list-col {
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.app.light .list-col {
+  color: #374151;
+}
+
+.app.dark .list-col {
+  color: #e2e8f0;
+}
+
+.list-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.empty-list {
+  text-align: center;
+  padding: 40px;
+  transition: color 0.3s ease;
+}
+
+.app.light .empty-list {
+  color: #9ca3af;
+}
+
+.app.dark .empty-list {
+  color: #64748b;
+}
+
+.task-card.list-mode {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 120px;
+  gap: 15px;
+  align-items: center;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.app.light .task-card.list-mode {
+  border: 1px solid #e5e7eb;
+  background: white;
+}
+
+.app.dark .task-card.list-mode {
+  border: 1px solid #334155;
+  background: #334155;
+}
+
+.app.light .task-card.list-mode:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.1);
+}
+
+.app.dark .task-card.list-mode:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.task-card.list-mode .task-title {
+  font-size: 14px;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.app.light .task-card.list-mode .task-title {
+  color: #1f2937;
+}
+
+.app.dark .task-card.list-mode .task-title {
+  color: #f1f5f9;
+}
+
+.task-card.list-mode .task-description {
+  display: none;
+}
+
+.task-card.list-mode .task-meta {
+  display: contents;
+}
+
+.task-card.list-mode .priority-badge {
+  justify-self: start;
+}
+
+.task-card.list-mode .due-date {
+  justify-self: start;
+}
+
+.task-card.list-mode .task-actions {
+  justify-self: end;
+  display: flex;
+  gap: 8px;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.status-badge.to-do {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.in-progress {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.app.dark .status-badge.to-do {
+  background: #7f1d1d;
+  color: #fecaca;
+}
+
+.app.dark .status-badge.in-progress {
+  background: #78350f;
+  color: #fde68a;
+}
+
+.app.dark .status-badge.done {
+  background: #064e3b;
+  color: #a7f3d0;
+}
+
+.task-card.list-mode .due-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  transition: color 0.3s ease;
+}
+
+.app.light .task-card.list-mode .due-date {
+  color: #6b7280;
+}
+
+.app.dark .task-card.list-mode .due-date {
+  color: #9ca3af;
+}

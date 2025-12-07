@@ -1,0 +1,74 @@
+.confirm-dialog {
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.app.light .confirm-dialog {
+  background: white;
+}
+
+.app.dark .confirm-dialog {
+  background: #1e293b;
+}
+
+.confirm-icon {
+  color: #dc2626;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.confirm-dialog h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.app.light .confirm-dialog h3 {
+  color: #1e293b;
+}
+
+.app.dark .confirm-dialog h3 {
+  color: #f1f5f9;
+}
+
+.confirm-dialog p {
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.app.light .confirm-dialog p {
+  color: #64748b;
+}
+
+.app.dark .confirm-dialog p {
+  color: #94a3b8;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.625rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.btn-danger:hover {
+  background: #b91c1c;
+}

@@ -1,0 +1,208 @@
+.task-card {
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.app.light .task-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.app.dark .task-card {
+  background: #334155;
+  border: 1px solid #475569;
+}
+
+.task-card:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.app.light .task-card:hover {
+  border-color: #cbd5e1;
+}
+
+.app.dark .task-card:hover {
+  border-color: #64748b;
+}
+
+.task-card:active {
+  cursor: pointer;
+}
+
+.task-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.task-actions {
+  display: flex;
+  gap: 0.25rem;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.task-card:hover .task-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.app.light .action-btn {
+  color: #6b7280;
+}
+
+.app.dark .action-btn {
+  color: #9ca3af;
+}
+
+.app.light .action-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.app.dark .action-btn:hover {
+  background: #475569;
+  color: #e5e7eb;
+}
+
+.app.light .delete-btn:hover {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.app.dark .delete-btn:hover {
+  background: #1f2937;
+  color: #fca5a5;
+}
+
+.task-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.app.light .task-title {
+  color: #1e293b;
+}
+
+.app.dark .task-title {
+  color: #f1f5f9;
+}
+
+.task-description {
+  font-size: 0.75rem;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.app.light .task-description {
+  color: #64748b;
+}
+
+.app.dark .task-description {
+  color: #94a3b8;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.priority-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: white;
+}
+
+.priority-badge.low {
+  background: #059669;
+}
+
+.priority-badge.medium {
+  background: #d97706;
+}
+
+.priority-badge.high {
+  background: #dc2626;
+}
+
+.priority-badge.critical {
+  background: #991b1b;
+}
+
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.625rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.app.light .due-date {
+  color: #6b7280;
+  background: #f8fafc;
+}
+
+.app.dark .due-date {
+  color: #9ca3af;
+  background: #1e293b;
+}
+
+.transcript {
+  margin-top: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border-left: 3px solid #8b5cf6;
+  transition: all 0.3s ease;
+}
+
+.app.light .transcript {
+  background: #f8fafc;
+}
+
+.app.dark .transcript {
+  background: #1e293b;
+}
+
+.transcript small {
+  font-size: 0.625rem;
+  font-style: italic;
+  transition: color 0.3s ease;
+}
+
+.app.light .transcript small {
+  color: #6b7280;
+}
+
+.app.dark .transcript small {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    padding: 0.75rem;
+  }
+}

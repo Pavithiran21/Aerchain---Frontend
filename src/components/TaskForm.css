@@ -1,0 +1,98 @@
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.app.light .modal-header {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.app.dark .modal-header {
+  border-bottom: 1px solid #334155;
+}
+
+.modal-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.app.light .modal-header h3 {
+  color: #1e293b;
+}
+
+.app.dark .modal-header h3 {
+  color: #f1f5f9;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.app.light .close-btn {
+  color: #6b7280;
+}
+
+.app.dark .close-btn {
+  color: #9ca3af;
+}
+
+.app.light .close-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.app.dark .close-btn:hover {
+  background: #374151;
+  color: #e5e7eb;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.required {
+  color: #dc2626;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.form-control.error {
+  border-color: #dc2626;
+}
+
+.form-control.error:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.error-message {
+  display: block;
+  color: #dc2626;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

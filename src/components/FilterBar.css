@@ -1,0 +1,210 @@
+.filter-bar {
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.app.light .filter-bar {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.app.dark .filter-bar {
+  background: #1e293b;
+  border: 1px solid #334155;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input-wrapper svg {
+  position: absolute;
+  left: 0.75rem;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.app.light .search-input-wrapper svg {
+  color: #9ca3af;
+}
+
+.app.dark .search-input-wrapper svg {
+  color: #6b7280;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.app.light .search-input {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+}
+
+.app.dark .search-input {
+  background: #374151;
+  border: 1px solid #4b5563;
+  color: #f3f4f6;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.app.light .search-input:focus {
+  background: #ffffff;
+}
+
+.app.dark .search-input:focus {
+  background: #475569;
+}
+
+.search-input::placeholder {
+  transition: color 0.3s ease;
+}
+
+.app.light .search-input::placeholder {
+  color: #9ca3af;
+}
+
+.app.dark .search-input::placeholder {
+  color: #6b7280;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.filter-group svg {
+  transition: color 0.3s ease;
+}
+
+.app.light .filter-group svg {
+  color: #6b7280;
+}
+
+.app.dark .filter-group svg {
+  color: #9ca3af;
+}
+
+.filter-select {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+
+.filter-select.date-filter {
+  min-width: 150px;
+}
+
+.app.light .filter-select {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  color: #1f2937;
+}
+
+.app.dark .filter-select {
+  background: #374151;
+  border: 1px solid #4b5563;
+  color: #f3f4f6;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.app.light .filter-select:focus {
+  background: #ffffff;
+}
+
+.app.dark .filter-select:focus {
+  background: #475569;
+}
+
+.filter-select option {
+  transition: all 0.3s ease;
+}
+
+.app.light .filter-select option {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.app.dark .filter-select option {
+  background: #374151;
+  color: #f3f4f6;
+}
+
+.clear-filters-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.clear-filters-btn:hover {
+  background: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .filter-bar {
+    margin: 1rem;
+    padding: 1rem;
+  }
+  
+  .filter-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  
+  .search-group {
+    min-width: auto;
+  }
+  
+  .filter-group {
+    justify-content: space-between;
+  }
+  
+  .filter-select {
+    flex: 1;
+    min-width: auto;
+  }
+}

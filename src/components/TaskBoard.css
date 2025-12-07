@@ -1,0 +1,66 @@
+.task-board {
+  padding: 2rem;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.board-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.app.light .board-header h2 {
+  color: #1e293b;
+}
+
+.app.dark .board-header h2 {
+  color: #f1f5f9;
+}
+
+.voice-btn {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.voice-btn:hover {
+  background: #7c3aed;
+}
+
+.board-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  min-height: 600px;
+}
+
+@media (max-width: 768px) {
+  .task-board {
+    padding: 1rem;
+  }
+  
+  .board-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .board-columns {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
